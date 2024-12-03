@@ -25,6 +25,11 @@ import org.json.JSONException;
 @CapacitorPlugin(name = "AvaRemotePlugin")
 public class AvaRemotePluginPlugin extends Plugin {
 
+    @Override
+    public void load(){
+        initializePlugin();
+    }
+
     @PluginMethod
     public void echo(PluginCall call) {
         String value = call.getString("value");
@@ -46,8 +51,7 @@ public class AvaRemotePluginPlugin extends Plugin {
         context.sendBroadcast(intent);
     }
 
-    @PluginMethod()
-    public void initializePlugin(PluginCall call){
+    public void initializePlugin(){
         Context context = getContext();
         if(context != null){
             Log.d("AVA Remote Plugin", "Initialize plugin method called");
@@ -72,13 +76,13 @@ public class AvaRemotePluginPlugin extends Plugin {
             JSObject initialConfig = new JSObject();
             initialConfig.put("version", 1);
             initialConfig.put("namespace", "com.example.avaremoteapp");
-            initialConfig.put("backgroundVideo", "white");
+            initialConfig.put("backgroundVideo", "red");
             initialConfig.put("configurationId", "uniqueID");
             initialConfig.put("buttons", new JSArray());
             setConfig(context, initialConfig.toString());
         }
         else {
-            call.reject("Failed to initialize plugin: Context is null.");
+            Log.d("AVA Remote Plugin","Failed to initialize plugin: Context is null.");
         }
     }
 

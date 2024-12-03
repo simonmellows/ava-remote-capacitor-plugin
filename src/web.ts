@@ -8,9 +8,9 @@ export class AvaRemotePluginWeb extends WebPlugin implements AvaRemotePluginPlug
     return options;
   }
 
-  async initializePlugin(): Promise<void>{
+  /*async initializePlugin(): Promise<void>{
     console.log('Initializing AVA plugin...');
-  }
+  }*/
 
   async sendConfig(options: {config: Object}): Promise<void>{
     console.log('Sending config: ', options);
