@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ava-remote-plugin
 
 A Capacitor plugin for parsing data to/from an AVA remote
@@ -827,3 +828,7 @@ Creates a new function.
 <code><a href="#functiondeclaration">FunctionDeclaration</a> | <a href="#variabledeclaration">VariableDeclaration</a> | <a href="#classdeclaration">ClassDeclaration</a></code>
 
 </docgen-api>
+=======
+# ava-remote-capacitor-plugin
+A Capacitor plugin for parsing data to/from an AVA remote
+>>>>>>> 7642092fbc193c1bd583b12d1a82fe474b8c0001
